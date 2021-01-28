@@ -35,7 +35,7 @@ class Solution:
     * 唯一需要注意的是 j 应该从后往前反向遍历，因为每个物品（或者说数字）只能用一次，
       以免之前的结果影响其他的结果。
  """
-class Solution:
+class Solution2:
     def canPartition(self, nums: List[int]) -> bool:
         #---子集背包问题---
         # 求数组的和，转化为背包问题
