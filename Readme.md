@@ -3,6 +3,6 @@
 2. 十大经典排序算法 https://github.com/hustcc/JS-Sorting-Algorithm
 3. CS-notes(Github stars:120K) http://www.cyc2018.xyz/
 
-### 刷题量
-- [x] 刷完100道题 2021.2.11 除夕夜
+### Timothy的刷题量
+- [x] 刷完100道题 | 2021.2.11 除夕夜
 - [ ] 刷完200道题
