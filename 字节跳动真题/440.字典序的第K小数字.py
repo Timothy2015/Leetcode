@@ -1,4 +1,5 @@
 # https://leetcode-cn.com/problems/k-th-smallest-in-lexicographical-order/
+# 精彩题解：https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/selected/byte-dance-algo-ex-2017#3-zi-dian-xu
 
 class Solution(object):
     def findKthNumber(self, n, k):
