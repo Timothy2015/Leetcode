@@ -21,7 +21,7 @@ class Solution:
         if n==2: return 2
         dp_n_1 = 1
         dp_n_2 = 2
-        for i in range(3, n+1):
+        for _ in range(3, n+1):
             dp_i = dp_n_1 + dp_n_2
             dp_n_1 = dp_n_2
             dp_n_2 = dp_i
