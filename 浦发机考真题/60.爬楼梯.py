@@ -26,6 +26,3 @@ while True:
             print("{}级台阶上楼的方式：{}".format(n, n_n))
     else:
         print("n为整数，且n的范围为[1,90),您的输入有误，请重新输入!")
-
-
-    
