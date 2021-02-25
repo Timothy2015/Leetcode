@@ -3,6 +3,7 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         # 空间O(1)的方法：三、位运算（好像开关的跳变），非常巧妙
+        # 如果能设计一个状态转换电路，使得一个数出现3次时能自动抵消为0，最后剩下的就是只出现1次的数
         seen_once = seen_twcie = 0
         for num in nums:
             seen_once = ~seen_twcie & (seen_once ^ num)
