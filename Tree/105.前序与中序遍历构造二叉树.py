@@ -85,8 +85,7 @@ class Solution:
     """
 
 
-# 2021.2.26 重建二叉树 - 二刷
-"""
+############## 2021.2.26 重建二叉树 - 二刷 ###################
 # -*- coding:utf-8 -*-
 # class TreeNode:
 #     def __init__(self, x):
@@ -124,4 +123,3 @@ class Solution:
         root = build(pre, 0, len(pre)-1, tin, 0, len(tin)-1)
         print(root)
         return root
-"""
