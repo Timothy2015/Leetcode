@@ -5,6 +5,7 @@ class Solution:
         if preorder==None: return None
 
         def build(preStart, preEnd, inStart, inEnd):
+            """递归的base case"""
             if inStart > inEnd: return None
         
             first = preorder[preStart]
@@ -57,7 +58,7 @@ class Solution:
         return root
 """
 
-        # 最快的提交方案：递归 + 字典提高查找效率
+# 最快的提交方案：递归 + 字典提高查找效率
 """
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
@@ -83,3 +84,44 @@ class Solution:
         return myBuildTree(0, n - 1, 0, n - 1)
     """
 
+
+# 2021.2.26 重建二叉树 - 二刷
+"""
+# -*- coding:utf-8 -*-
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+class Solution:
+    # 返回构造的TreeNode根节点
+    def reConstructBinaryTree(self, pre, tin):
+        # 递归子函数
+        def build(pNum, pStart, pEnd, tNum, tStart, tEnd):
+            ### 忘记了处理边界，但凡递归，必须要有出口!!!
+            ### base case: 即pStart>pEnd时就终止
+            if pStart > pEnd: return None
+            
+            # 第一个节点做什么？
+            first = pNum[pStart]
+            root = TreeNode(first)
+            idx = mp[first]
+            L_len = idx - tStart
+            R_len = tEnd - idx
+            root.left = build(pNum, pStart+1, pStart+L_len, tNum, tStart, idx-1)
+            root.right = build(pNum, pStart+L_len+1, pStart+L_len+R_len, tNum, idx+1, tEnd)
+            # root.right = build(pNum, pStart+L_len+1, pEnd, tNum, tStart, tEnd)
+            return root
+        
+        # 创建哈希表，便于查找pre中root在tin中的位置
+        mp = {}
+        for i in range(len(tin)):
+            # 根据值寻找索引
+            print(i)
+            mp[tin[i]] = i
+            print(mp)
+            
+        root = build(pre, 0, len(pre)-1, tin, 0, len(tin)-1)
+        print(root)
+        return root
+"""
