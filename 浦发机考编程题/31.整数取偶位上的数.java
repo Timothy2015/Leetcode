@@ -7,25 +7,28 @@ import java.util.Scanner;
 public class Main{
 
     public static int newNum(int n){
-        // 整型转换为字符串处理
-        String str = String.valueOf(n);
-        // System.out.println(str);
-        // System.out.println(GetType(str));
-        // 字符串转换为字符数组
-        String[] strs = new String[20]
-        // System.out.println(strs[0]);
-
-        if (strs.length < 2){return 0;}
+        // 计算整数的位数
+        int count = 0, temp = n;
+        while (temp != 0){
+            count += 1;
+            temp /= 10;
+        }
+        // 一位数则没有偶位上的数，返回0
+        if (count < 2){
+            return 0;
+        }
+        // System.out.println(count);
+        // 创建一个刚刚够大的数组
+        int[] nums = new int[count];
+        temp = n;
+        for (int i=count-1; i>-1; i--){
+            nums[i] = temp % 10;
+            temp /= 10; 
+        }
         int res = 0;
-        // arr.length 获取数组长度
-        // str.length() 获取字符串长度
-        for (int i=1; i<strs.length; i+=2){
-            // System.out.println((int)strs[i]);
-            // int num = Integer.valueOf(strs[i]);
-            int num = Integer.parseInt(strs[i]);
-            // res = res*10 + (int)strs[i];        
-            res = res*10 + num;
-            // System.out.println(res);
+        // 取偶位上的数，组成新的数
+        for (int i=1; i<count; i+=2){
+            res = res*10 + nums[i];
         }
         return res;
     }
