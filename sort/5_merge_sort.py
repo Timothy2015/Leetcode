@@ -1,7 +1,7 @@
 # https://leetcode-cn.com/problems/sort-an-array/submissions/
 
 class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
+    def sortArray(self, nums):
         # 归并排序
 
         # 关键的归并操作
