@@ -10,6 +10,6 @@ def isLeapYear(year):
     else:
         return False
 
-for i in range(1900,2011):
+for i in range(1990,2011):
     if isLeapYear(i):
         print(i)

@@ -1,5 +1,5 @@
 // 输入一个正整数，判断是否为素数
-// 素数：除了1和它本身以外，没有被其他的数可以被整除
+// 素数：除了1和它本身以外，没有被其他的数可以被整除（最小的素数为2）
 
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ public class Main{
         Scanner sc = new Scanner(System.in);
         System.out.println("input a interger: ");
         int n = sc.nextInt();
-        // 从1穷举到sqrt(n)+1，因为
+        // 只需要：从1穷举到sqrt(n)+1（可以数学上严格证明）
         System.out.println("result: " + isPrime(n));
     }
 }
