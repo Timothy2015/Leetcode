@@ -15,8 +15,8 @@ print(josephus(n, m) + 1)
 """
 ## 迭代求解
 # n=1
-live = 0
+live = 0 #下标从0开始，递归公式无需加1，最后打印结果时再加1
 # n=2,...,n
-for i in range(2,n+1):
+for i in range(2, n+1):
     live = (live + m) % i 
 print(live + 1)
