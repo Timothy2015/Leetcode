@@ -1,4 +1,7 @@
+// Leetcode:
 // https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/
+// 牛客网：
+// https://www.nowcoder.com/practice/554aa508dd5d4fefbf0f86e5fe953abd?tpId=188&tqId=38297&rp=1&ru=%2Factivity%2Foj&qru=%2Fta%2Fjob-code-high-week%2Fquestion-ranking&tab=answerKey
 
 class Solution {
     public int maxSubArray(int[] nums) {
@@ -8,8 +11,8 @@ class Solution {
         int dp_i_1 = nums[0], dp_i_2 = nums[0]; //额外空间O(1)
         int res = nums[0];
         for (int i=1; i<nums.length; i++){
-            dp_i_2 = Math.max(dp_i_1, 0) + nums[i]; //前后若是负收益，则不如不要
-            res = Math.max(res, dp_i_2); 
+            dp_i_2 = Math.max(dp_i_1, 0) + nums[i]; //前面若是负收益，则不如不要
+            res = Math.max(res, dp_i_2); //保存历史过程中的最大值
             dp_i_1 = dp_i_2;
         }
         return res;
