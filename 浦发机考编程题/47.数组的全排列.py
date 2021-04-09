@@ -11,7 +11,7 @@
 3. 结束条件：选择列表为空，或已经达到决策树的底部
 """
 nums = [1, 2, 3]
-"""
+
 # 使用python不能使用切片，自定义切片列表的切片
 def list_slice(nums, l, r):
     res = []
@@ -46,7 +46,7 @@ def backTrace(trace, nums):
 trace = []
 backTrace(trace, nums)
 print(res)
-"""
+
 
 
 # 回溯算法的时间复杂度：O(N!)
@@ -62,6 +62,8 @@ print(res)
 # dict.keys() 以列表返回一个字典所有的键
 # dict.values() 以列表返回字典中所有的值
 
+
+"""
 import collections
 
 trace = collections.OrderedDict()
@@ -91,12 +93,4 @@ res = []
 backTrace(trace, nums)
 print(res)
 
-
-
-
-
-
-
-
-
-
+"""

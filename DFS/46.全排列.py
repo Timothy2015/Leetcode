@@ -3,14 +3,6 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
 
-        # 自定义简单的列表切片函数
-        def self_slice(nums, l, r):
-            # [l, r)
-            res = []
-            for i in range(l, r):
-                res.append(nums[i])
-            return res
-
         # 回溯算法
         def backTrace(nums, trace): # 路径 + 选择
             # 结束条件
